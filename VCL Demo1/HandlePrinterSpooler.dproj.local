@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/10/09 14:49:42.000.160,=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/02/18 12:49:00.000.888,=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/02/18 13:10:51.000.816,=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/02/18 17:31:46.000.239,=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/02/27 18:33:12.000.335,=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/06/30 16:46:36.000.199,=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/04/03 12:21:24.000.355,=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/02/10 18:47:28.000.622,=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/02/10 18:59:27.000.360,G:\MyWork_FL\Delphi\2022\Handling Printer Spooler\Demo1\uMain.dfm=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/02/10 18:59:27.000.360,G:\MyWork_FL\Delphi\2022\Handling Printer Spooler\Demo1\uMain.pas=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/02/10 18:59:41.000.469,G:\MyWork_FL\Delphi\2022\Handling Printer Spooler\Demo1\HandlePrinterSpooler.dproj=C:\Users\karthik.AGILELABS\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<PMAC iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

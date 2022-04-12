@@ -1,0 +1,47 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 480
+  ClientWidth = 564
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object btnShowPrinter: TButton
+    Position.X = 152.000000000000000000
+    Position.Y = 40.000000000000000000
+    TabOrder = 0
+    Text = 'ShowPrinter'
+    OnClick = btnShowPrinterClick
+  end
+  object lblprinter: TLabel
+    Position.X = 152.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Printer'
+  end
+  object medPrintJobsCount: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Position.X = 152.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Position.X = 40.000000000000000000
+    Position.Y = 256.000000000000000000
+    Size.Width = 505.000000000000000000
+    Size.Height = 193.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Viewport.Width = 501.000000000000000000
+    Viewport.Height = 189.000000000000000000
+  end
+end

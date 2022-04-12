@@ -1,0 +1,42 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 234
+  ClientWidth = 398
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object btnShowPrintJobsCount: TButton
+    Left = 32
+    Top = 40
+    Width = 145
+    Height = 25
+    Caption = 'Show jobs count'
+    TabOrder = 0
+    OnClick = btnShowPrintJobsCountClick
+  end
+  object medPrintJobsCount: TMaskEdit
+    Left = 200
+    Top = 42
+    Width = 145
+    Height = 21
+    TabOrder = 1
+    Text = 'medPrintJobsCount'
+  end
+  object Memo1: TMemo
+    Left = 32
+    Top = 71
+    Width = 313
+    Height = 138
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 2
+  end
+end

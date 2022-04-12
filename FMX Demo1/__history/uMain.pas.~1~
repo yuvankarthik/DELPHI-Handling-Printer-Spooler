@@ -1,0 +1,93 @@
+unit uMain;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,Winspool,printers ;
+
+type
+  TForm2 = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.fmx}
+
+Function GetCurrentPrinterHandle: THandle;
+  Const
+    Defaults: TPrinterDefaults = (
+      pDatatype : nil;
+      pDevMode  : nil;
+      DesiredAccess : PRINTER_ACCESS_USE or PRINTER_ACCESS_ADMINISTER
+);
+  Var
+    Device, Driver, Port : array[0..255] of char;
+    hDeviceMode: THandle;
+  Begin { GetCurrentPrinterHandle }
+    Printer.GetPrinter(Device, Driver, Port, hDeviceMode);
+    If not OpenPrinter(@Device, Result, @Defaults) Then
+      RaiseLastWin32Error;
+  End; { GetCurrentPrinterHandle }
+
+
+{: Kill all pending jobs on the current printer }
+Procedure PurgeJobsOnCurrentPrinter;
+  Var
+    hPrinter: THandle;
+  Begin
+    hPrinter:= GetCurrentPrinterHandle;
+    try
+      If not WinSpool.SetPrinter( hPrinter, 0, nil,
+PRINTER_CONTROL_PURGE )
+      Then
+        RaiseLastWin32Error;
+    finally
+      ClosePrinter( hPrinter );
+    end;
+  End; { PurgeJobsOnCurrentPrinter }
+
+
+function GetCurrentPrinterHandle1: THandle;
+var
+  Device, Driver, Port: array[0..255] of Char;
+  hDeviceMode: THandle;
+begin
+  Printer.GetPrinter(Device, Driver, Port, hDeviceMode);
+  if not OpenPrinter(@Device, Result, nil) then
+    RaiseLastWin32Error;
+end;
+
+function SavePChar(p: PChar): PChar;
+const
+  error: PChar = 'Nil';
+begin
+  if not Assigned(p) then
+    Result := error
+  else
+    Result := p;
+end;
+
+//getPrintername // -1 to set default pronter name
+Function GetPrinterName(pPrinterIdx : Integer = -1):String;
+begin
+if (Printer.Printers.Count > 0) then begin
+    // from Peter...
+   Printer.PrinterIndex := -1; // select default printer
+   result := Printer.Printers[ Printer.PrinterIndex ];
+end
+else begin
+    // this computer does not have any printer installed (in Windows)
+end;
+end;
+
+
+
+end.

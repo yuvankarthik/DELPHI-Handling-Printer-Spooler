@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{278DC594-168A-4954-A328-5261110FFF80}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="HandlePrinterSpooler.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FMX Demo1\FMXHandlePrinter.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="HandlePrinterSpooler">
+        <MSBuild Projects="HandlePrinterSpooler.dproj"/>
+    </Target>
+    <Target Name="HandlePrinterSpooler:Clean">
+        <MSBuild Projects="HandlePrinterSpooler.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HandlePrinterSpooler:Make">
+        <MSBuild Projects="HandlePrinterSpooler.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXHandlePrinter">
+        <MSBuild Projects="..\FMX Demo1\FMXHandlePrinter.dproj"/>
+    </Target>
+    <Target Name="FMXHandlePrinter:Clean">
+        <MSBuild Projects="..\FMX Demo1\FMXHandlePrinter.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXHandlePrinter:Make">
+        <MSBuild Projects="..\FMX Demo1\FMXHandlePrinter.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="HandlePrinterSpooler;FMXHandlePrinter"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="HandlePrinterSpooler:Clean;FMXHandlePrinter:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="HandlePrinterSpooler:Make;FMXHandlePrinter:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
